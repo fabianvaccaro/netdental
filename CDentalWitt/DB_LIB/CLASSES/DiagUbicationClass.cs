@@ -28,20 +28,28 @@ namespace DB_LIB.CLASSES
 
         public Boolean Save()
         {
-            DiagUbication Diag = new DiagUbication();
-            Diag.Bodypart = Bodypart;
-            Diag.Codification = Codification;
-            try
+            if(!Read(Id))
             {
-                Model1Container contenedor = new Model1Container();
-                contenedor.DiagUbicationSet.Add(Diag);
-                contenedor.SaveChanges();
-                return true;
+                DiagUbication Diag = new DiagUbication();
+                Diag.Bodypart = Bodypart;
+                Diag.Codification = Codification;
+                try
+                {
+                    Model1Container contenedor = new Model1Container();
+                    contenedor.DiagUbicationSet.Add(Diag);
+                    contenedor.SaveChanges();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    return false;
+                }
             }
-            catch (Exception e)
+            else 
             {
                 return false;
             }
+            
         }
 
         public Boolean Read(Int32 nID)

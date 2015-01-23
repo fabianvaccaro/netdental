@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Chari" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDiagTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagUbication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Bdpar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Codification" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagUbicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDiagUbicationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetExtentionDent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Siz" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetExtentionDentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetExtentionDentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagpiece">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Defi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ubi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDiagpieceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDiagpieceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

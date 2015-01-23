@@ -173,6 +173,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="web\panel\diagnostics_settings.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -206,10 +207,24 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Service References\DiagnosticServices\Diagnostics.wsdl" />
+    <None Include="Service References\DiagnosticServices\Diagnostics.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServices\Diagnostics1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\NetDentServices\TestService1.disco" />
     <None Include="Service References\NetDentServices\configuration91.svcinfo" />
     <None Include="Service References\NetDentServices\configuration.svcinfo" />
     <None Include="Service References\NetDentServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DiagnosticServices\Diagnostics.disco" />
+    <None Include="Service References\DiagnosticServices\configuration91.svcinfo" />
+    <None Include="Service References\DiagnosticServices\configuration.svcinfo" />
+    <None Include="Service References\DiagnosticServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -371,6 +386,11 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DiagnosticServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\NetDentServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -405,6 +425,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="web\panel\diagnostics_settings.aspx.cs">
+      <DependentUpon>diagnostics_settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\panel\diagnostics_settings.aspx.designer.cs">
+      <DependentUpon>diagnostics_settings.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -413,6 +440,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DiagnosticServices\" />
     <WCFMetadataStorage Include="Service References\NetDentServices\" />
   </ItemGroup>
   <PropertyGroup>

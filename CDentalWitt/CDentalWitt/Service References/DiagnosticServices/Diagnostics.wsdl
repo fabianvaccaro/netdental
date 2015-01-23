@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Diagnostics" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:10584/SERVICES/Diagnostics.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:10584/SERVICES/Diagnostics.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDiagnostics_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagType" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagUbication_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagUbication" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagUbication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagUbicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetExtentionDent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetExtentionDent" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetExtentionDent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetExtentionDentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagpiece_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagpiece" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnostics_SetDiagpiece_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDiagpieceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDiagnostics">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDiagnostics/DoWork" message="tns:IDiagnostics_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDiagnostics/DoWorkResponse" message="tns:IDiagnostics_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagType" message="tns:IDiagnostics_SetDiagType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagTypeResponse" message="tns:IDiagnostics_SetDiagType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagUbication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagUbication" message="tns:IDiagnostics_SetDiagUbication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagUbicationResponse" message="tns:IDiagnostics_SetDiagUbication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetExtentionDent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDiagnostics/SetExtentionDent" message="tns:IDiagnostics_SetExtentionDent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDiagnostics/SetExtentionDentResponse" message="tns:IDiagnostics_SetExtentionDent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagpiece">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagpiece" message="tns:IDiagnostics_SetDiagpiece_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDiagnostics/SetDiagpieceResponse" message="tns:IDiagnostics_SetDiagpiece_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDiagnostics" type="tns:IDiagnostics">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IDiagnostics/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagType">
+      <soap:operation soapAction="http://tempuri.org/IDiagnostics/SetDiagType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagUbication">
+      <soap:operation soapAction="http://tempuri.org/IDiagnostics/SetDiagUbication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExtentionDent">
+      <soap:operation soapAction="http://tempuri.org/IDiagnostics/SetExtentionDent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDiagpiece">
+      <soap:operation soapAction="http://tempuri.org/IDiagnostics/SetDiagpiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Diagnostics">
+    <wsdl:port name="BasicHttpBinding_IDiagnostics" binding="tns:BasicHttpBinding_IDiagnostics">
+      <soap:address location="http://localhost:10584/SERVICES/Diagnostics.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

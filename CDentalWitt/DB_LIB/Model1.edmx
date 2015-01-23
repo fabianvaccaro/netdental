@@ -96,6 +96,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Size" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="DiagTypeSet">
     <Key>
@@ -568,6 +569,7 @@
       <EntityTypeMapping TypeName="IsTypeOf(Model1.ExtentionDent)">
         <MappingFragment StoreEntitySet="ExtentionDentSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 01/23/2015 15:53:46
+-- Date Created: 01/23/2015 17:49:36
 -- Generated from EDMX file: C:\Users\Fabian\Source\Repos\netdental\CDentalWitt\DB_LIB\Model1.edmx
 -- --------------------------------------------------
 
@@ -53,6 +53,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_DiagpieceTooth8]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ToothSet] DROP CONSTRAINT [FK_DiagpieceTooth8];
 GO
+IF OBJECT_ID(N'[dbo].[FK_ClinicalHistoryPatient]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PatientSet] DROP CONSTRAINT [FK_ClinicalHistoryPatient];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ToothClinicalHistory]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ClinicalHistorySet] DROP CONSTRAINT [FK_ToothClinicalHistory];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -72,6 +78,12 @@ IF OBJECT_ID(N'[dbo].[DiagTypeSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[ToothSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ToothSet];
+GO
+IF OBJECT_ID(N'[dbo].[PatientSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PatientSet];
+GO
+IF OBJECT_ID(N'[dbo].[ClinicalHistorySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ClinicalHistorySet];
 GO
 
 -- --------------------------------------------------
@@ -101,7 +113,8 @@ GO
 
 -- Creating table 'ExtentionDentSet'
 CREATE TABLE [dbo].[ExtentionDentSet] (
-    [Id] int IDENTITY(1,1) NOT NULL
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Size] nvarchar(max)  NOT NULL
 );
 GO
 
