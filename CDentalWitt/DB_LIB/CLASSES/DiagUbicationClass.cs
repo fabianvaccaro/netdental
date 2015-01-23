@@ -9,33 +9,36 @@ namespace DB_LIB.CLASSES
 {
     [DataContract]
     [Serializable]
-    public class DiagTypeClass
+    public class DiagUbicationClass
     {
         [DataMember]
         public Int32 Id { get; set; }
 
         [DataMember]
-        public String Characteristic { get; set; }
+        public String Bodypart { get; set; }
 
-        public DiagTypeClass()
+        [DataMember]
+        public String Codification { get; set; }
+
+        public DiagUbicationClass()
         {
-
-            Characteristic = String.Empty;
+            Bodypart = String.Empty;
+            Codification = String.Empty;
         }
 
         public Boolean Save()
         {
-            DiagType diag = new DiagType();
-            diag.Id = Id;
-            diag.Characteristic = Characteristic;
+            DiagUbication Diag = new DiagUbication();
+            Diag.Bodypart = Bodypart;
+            Diag.Codification = Codification;
             try
             {
-                Model1Container Cont = new Model1Container();
-                Cont.DiagTypeSet.Add(diag);
-                Cont.SaveChanges();
+                Model1Container contenedor = new Model1Container();
+                contenedor.DiagUbicationSet.Add(Diag);
+                contenedor.SaveChanges();
                 return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return false;
             }
@@ -45,7 +48,7 @@ namespace DB_LIB.CLASSES
         {
             using (Model1Container Contendor = new Model1Container())
             {
-                var xdf = (from arecord in Contendor.DiagTypeSet
+                var xdf = (from arecord in Contendor.DiagUbicationSet
                            where arecord.Id == nID
                            select new
                            {
@@ -53,10 +56,11 @@ namespace DB_LIB.CLASSES
                            }).FirstOrDefault();
                 try
                 {
-                    if (xdf.arecord != null)
+                    if(xdf.arecord!=null)
                     {
                         Id = xdf.arecord.Id;
-                        Characteristic = xdf.arecord.Characteristic;
+                        Bodypart = xdf.arecord.Bodypart;
+                        Codification = xdf.arecord.Codification;
                         return true;
                     }
                     else
@@ -69,7 +73,7 @@ namespace DB_LIB.CLASSES
                     return false;
                 }
             }
-
+            
         }
     }
 }

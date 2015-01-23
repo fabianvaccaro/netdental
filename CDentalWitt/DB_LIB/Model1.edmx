@@ -424,6 +424,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Diagpiece" Relationship="Model1.ExtentionDentDiagpiece" FromRole="ExtentionDent" ToRole="Diagpiece" />
+          <Property Name="Size" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="DiagType">
           <Key>

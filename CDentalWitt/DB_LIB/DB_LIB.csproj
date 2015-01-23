@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="CLASSES\DiagTypeClass.cs" />
+    <Compile Include="CLASSES\DiagUbicationClass.cs" />
+    <Compile Include="CLASSES\ExtentionClass.cs" />
     <Compile Include="ClinicalHistory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -20,6 +20,7 @@ namespace DB_LIB
         }
     
         public int Id { get; set; }
+        public string Size { get; set; }
     
         public virtual ICollection<Diagpiece> Diagpiece { get; set; }
     }
