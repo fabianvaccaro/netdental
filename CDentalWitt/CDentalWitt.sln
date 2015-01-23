@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDentalWitt", "CDentalWitt\CDentalWitt.csproj", "{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{A2D73AB4-916D-4FB5-AF72-4B7BC32AA3E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{A3771891-028B-4C14-AAA9-85D878E8FCD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_LIB", "DB_LIB\DB_LIB.csproj", "{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FRAME", "FRAME", "{74F9DAA3-37C2-4A45-BCDD-0253DEE7EEE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDentalService", "NetDentalService\NetDentalService.csproj", "{70610353-3137-4448-BD0A-DBDD76DD5863}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70610353-3137-4448-BD0A-DBDD76DD5863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70610353-3137-4448-BD0A-DBDD76DD5863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70610353-3137-4448-BD0A-DBDD76DD5863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70610353-3137-4448-BD0A-DBDD76DD5863}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CDD34C7-5CD2-49DD-AD17-96EB81D4E120} = {A2D73AB4-916D-4FB5-AF72-4B7BC32AA3E8}
+		{94FBBEC0-7FE0-4CCF-A637-84A94AF2F86C} = {A3771891-028B-4C14-AAA9-85D878E8FCD5}
+		{70610353-3137-4448-BD0A-DBDD76DD5863} = {74F9DAA3-37C2-4A45-BCDD-0253DEE7EEE4}
+	EndGlobalSection
+EndGlobal

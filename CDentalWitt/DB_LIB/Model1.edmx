@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="DiagpieceSet" EntityType="Model1.Store.DiagpieceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiagUbicationSet" EntityType="Model1.Store.DiagUbicationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExtentionDentSet" EntityType="Model1.Store.ExtentionDentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiagTypeSet" EntityType="Model1.Store.DiagTypeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ToothSet" EntityType="Model1.Store.ToothSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientSet" EntityType="Model1.Store.PatientSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClinicalHistorySet" EntityType="Model1.Store.ClinicalHistorySet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DiagTypeDiagpiece" Association="Model1.Store.DiagTypeDiagpiece">
+      <End Role="DiagType" EntitySet="DiagTypeSet" />
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagUbicationDiagpiece" Association="Model1.Store.DiagUbicationDiagpiece">
+      <End Role="DiagUbication" EntitySet="DiagUbicationSet" />
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+    </AssociationSet>
+    <AssociationSet Name="ExtentionDentDiagpiece" Association="Model1.Store.ExtentionDentDiagpiece">
+      <End Role="ExtentionDent" EntitySet="ExtentionDentSet" />
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth" Association="Model1.Store.DiagpieceTooth">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth1" Association="Model1.Store.DiagpieceTooth1">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth2" Association="Model1.Store.DiagpieceTooth2">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth3" Association="Model1.Store.DiagpieceTooth3">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth4" Association="Model1.Store.DiagpieceTooth4">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth5" Association="Model1.Store.DiagpieceTooth5">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth6" Association="Model1.Store.DiagpieceTooth6">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth7" Association="Model1.Store.DiagpieceTooth7">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="DiagpieceTooth8" Association="Model1.Store.DiagpieceTooth8">
+      <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+      <End Role="Tooth" EntitySet="ToothSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClinicalHistoryPatient" Association="Model1.Store.ClinicalHistoryPatient">
+      <End Role="ClinicalHistory" EntitySet="ClinicalHistorySet" />
+      <End Role="Patient" EntitySet="PatientSet" />
+    </AssociationSet>
+    <AssociationSet Name="ToothClinicalHistory" Association="Model1.Store.ToothClinicalHistory">
+      <End Role="Tooth" EntitySet="ToothSet" />
+      <End Role="ClinicalHistory" EntitySet="ClinicalHistorySet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DiagpieceSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Definition" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ubication" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Extention" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DiagType_Id" Type="int" Nullable="false" />
+    <Property Name="DiagUbication_Id" Type="int" Nullable="false" />
+    <Property Name="ExtentionDent_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiagUbicationSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bodypart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Codification" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExtentionDentSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiagTypeSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Characteristic" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToothSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CV" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROOT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EXTRA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ClinHist" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Diagpiece_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece1_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece2_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece3_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece4_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece5_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece6_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece7_Id" Type="int" Nullable="false" />
+    <Property Name="Diagpiece8_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatientSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DNI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FamName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ClinicalHistory_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClinicalHistorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tooth_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DiagTypeDiagpiece">
+    <End Role="DiagType" Type="Model1.Store.DiagTypeSet" Multiplicity="1" />
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiagType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Diagpiece">
+        <PropertyRef Name="DiagType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagUbicationDiagpiece">
+    <End Role="DiagUbication" Type="Model1.Store.DiagUbicationSet" Multiplicity="1" />
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiagUbication">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Diagpiece">
+        <PropertyRef Name="DiagUbication_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExtentionDentDiagpiece">
+    <End Role="ExtentionDent" Type="Model1.Store.ExtentionDentSet" Multiplicity="1" />
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExtentionDent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Diagpiece">
+        <PropertyRef Name="ExtentionDent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth1">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece1_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth2">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth3">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece3_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth4">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece4_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth5">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece5_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth6">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece6_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth7">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece7_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiagpieceTooth8">
+    <End Role="Diagpiece" Type="Model1.Store.DiagpieceSet" Multiplicity="1" />
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagpiece">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tooth">
+        <PropertyRef Name="Diagpiece8_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClinicalHistoryPatient">
+    <End Role="ClinicalHistory" Type="Model1.Store.ClinicalHistorySet" Multiplicity="1" />
+    <End Role="Patient" Type="Model1.Store.PatientSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClinicalHistory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="ClinicalHistory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ToothClinicalHistory">
+    <End Role="Tooth" Type="Model1.Store.ToothSet" Multiplicity="1" />
+    <End Role="ClinicalHistory" Type="Model1.Store.ClinicalHistorySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tooth">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClinicalHistory">
+        <PropertyRef Name="Tooth_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DiagpieceSet" EntityType="Model1.Diagpiece" />
+          <EntitySet Name="DiagUbicationSet" EntityType="Model1.DiagUbication" />
+          <EntitySet Name="ExtentionDentSet" EntityType="Model1.ExtentionDent" />
+          <EntitySet Name="DiagTypeSet" EntityType="Model1.DiagType" />
+          <AssociationSet Name="DiagTypeDiagpiece" Association="Model1.DiagTypeDiagpiece">
+            <End Role="DiagType" EntitySet="DiagTypeSet" />
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagUbicationDiagpiece" Association="Model1.DiagUbicationDiagpiece">
+            <End Role="DiagUbication" EntitySet="DiagUbicationSet" />
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+          </AssociationSet>
+          <AssociationSet Name="ExtentionDentDiagpiece" Association="Model1.ExtentionDentDiagpiece">
+            <End Role="ExtentionDent" EntitySet="ExtentionDentSet" />
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+          </AssociationSet>
+          <EntitySet Name="ToothSet" EntityType="Model1.Tooth" />
+          <AssociationSet Name="DiagpieceTooth" Association="Model1.DiagpieceTooth">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth1" Association="Model1.DiagpieceTooth1">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth2" Association="Model1.DiagpieceTooth2">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth3" Association="Model1.DiagpieceTooth3">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth4" Association="Model1.DiagpieceTooth4">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth5" Association="Model1.DiagpieceTooth5">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth6" Association="Model1.DiagpieceTooth6">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth7" Association="Model1.DiagpieceTooth7">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <AssociationSet Name="DiagpieceTooth8" Association="Model1.DiagpieceTooth8">
+            <End Role="Diagpiece" EntitySet="DiagpieceSet" />
+            <End Role="Tooth" EntitySet="ToothSet" />
+          </AssociationSet>
+          <EntitySet Name="PatientSet" EntityType="Model1.Patient" />
+          <EntitySet Name="ClinicalHistorySet" EntityType="Model1.ClinicalHistory" />
+          <AssociationSet Name="ClinicalHistoryPatient" Association="Model1.ClinicalHistoryPatient">
+            <End Role="ClinicalHistory" EntitySet="ClinicalHistorySet" />
+            <End Role="Patient" EntitySet="PatientSet" />
+          </AssociationSet>
+          <AssociationSet Name="ToothClinicalHistory" Association="Model1.ToothClinicalHistory">
+            <End Role="Tooth" EntitySet="ToothSet" />
+            <End Role="ClinicalHistory" EntitySet="ClinicalHistorySet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Diagpiece">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Definition" Type="String" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" />
+          <NavigationProperty Name="DiagType" Relationship="Model1.DiagTypeDiagpiece" FromRole="Diagpiece" ToRole="DiagType" />
+          <Property Name="Ubication" Type="String" Nullable="false" />
+          <Property Name="Extention" Type="String" Nullable="false" />
+          <NavigationProperty Name="DiagUbication" Relationship="Model1.DiagUbicationDiagpiece" FromRole="Diagpiece" ToRole="DiagUbication" />
+          <NavigationProperty Name="ExtentionDent" Relationship="Model1.ExtentionDentDiagpiece" FromRole="Diagpiece" ToRole="ExtentionDent" />
+          <NavigationProperty Name="Tooth" Relationship="Model1.DiagpieceTooth" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth1" Relationship="Model1.DiagpieceTooth1" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth2" Relationship="Model1.DiagpieceTooth2" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth3" Relationship="Model1.DiagpieceTooth3" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth4" Relationship="Model1.DiagpieceTooth4" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth5" Relationship="Model1.DiagpieceTooth5" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth6" Relationship="Model1.DiagpieceTooth6" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth7" Relationship="Model1.DiagpieceTooth7" FromRole="Diagpiece" ToRole="Tooth" />
+          <NavigationProperty Name="Tooth8" Relationship="Model1.DiagpieceTooth8" FromRole="Diagpiece" ToRole="Tooth" />
+        </EntityType>
+        <EntityType Name="DiagUbication">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bodypart" Type="String" Nullable="false" />
+          <Property Name="Codification" Type="String" Nullable="false" />
+          <NavigationProperty Name="Diagpiece" Relationship="Model1.DiagUbicationDiagpiece" FromRole="DiagUbication" ToRole="Diagpiece" />
+        </EntityType>
+        <EntityType Name="ExtentionDent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Diagpiece" Relationship="Model1.ExtentionDentDiagpiece" FromRole="ExtentionDent" ToRole="Diagpiece" />
+        </EntityType>
+        <EntityType Name="DiagType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Characteristic" Type="String" Nullable="false" />
+          <NavigationProperty Name="Diagpiece" Relationship="Model1.DiagTypeDiagpiece" FromRole="DiagType" ToRole="Diagpiece" />
+        </EntityType>
+        <Association Name="DiagTypeDiagpiece">
+          <End Type="Model1.DiagType" Role="DiagType" Multiplicity="1" />
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagUbicationDiagpiece">
+          <End Type="Model1.DiagUbication" Role="DiagUbication" Multiplicity="1" />
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="*" />
+        </Association>
+        <Association Name="ExtentionDentDiagpiece">
+          <End Type="Model1.ExtentionDent" Role="ExtentionDent" Multiplicity="1" />
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Tooth">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Position" Type="String" Nullable="false" />
+          <Property Name="OC" Type="String" Nullable="false" />
+          <Property Name="VE" Type="String" Nullable="false" />
+          <Property Name="LI" Type="String" Nullable="false" />
+          <Property Name="ME" Type="String" Nullable="false" />
+          <Property Name="DI" Type="String" Nullable="false" />
+          <Property Name="CV" Type="String" Nullable="false" />
+          <Property Name="CL" Type="String" Nullable="false" />
+          <NavigationProperty Name="Diagpiece" Relationship="Model1.DiagpieceTooth" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece1" Relationship="Model1.DiagpieceTooth1" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece2" Relationship="Model1.DiagpieceTooth2" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece3" Relationship="Model1.DiagpieceTooth3" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece4" Relationship="Model1.DiagpieceTooth4" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece5" Relationship="Model1.DiagpieceTooth5" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece6" Relationship="Model1.DiagpieceTooth6" FromRole="Tooth" ToRole="Diagpiece" />
+          <Property Name="ROOT" Type="String" Nullable="false" />
+          <Property Name="EXTRA" Type="String" Nullable="false" />
+          <NavigationProperty Name="Diagpiece7" Relationship="Model1.DiagpieceTooth7" FromRole="Tooth" ToRole="Diagpiece" />
+          <NavigationProperty Name="Diagpiece8" Relationship="Model1.DiagpieceTooth8" FromRole="Tooth" ToRole="Diagpiece" />
+          <Property Name="ClinHist" Type="String" Nullable="false" />
+          <NavigationProperty Name="ClinicalHistory" Relationship="Model1.ToothClinicalHistory" FromRole="Tooth" ToRole="ClinicalHistory" />
+        </EntityType>
+        <Association Name="DiagpieceTooth">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth1">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth2">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth3">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth4">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth5">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth6">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth7">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <Association Name="DiagpieceTooth8">
+          <End Type="Model1.Diagpiece" Role="Diagpiece" Multiplicity="1" />
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DNI" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="SecondName" Type="String" Nullable="false" />
+          <Property Name="FamName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <NavigationProperty Name="ClinicalHistory" Relationship="Model1.ClinicalHistoryPatient" FromRole="Patient" ToRole="ClinicalHistory" />
+        </EntityType>
+        <EntityType Name="ClinicalHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="Model1.ClinicalHistoryPatient" FromRole="ClinicalHistory" ToRole="Patient" />
+          <NavigationProperty Name="Tooth" Relationship="Model1.ToothClinicalHistory" FromRole="ClinicalHistory" ToRole="Tooth" />
+        </EntityType>
+        <Association Name="ClinicalHistoryPatient">
+          <End Type="Model1.ClinicalHistory" Role="ClinicalHistory" Multiplicity="1" />
+          <End Type="Model1.Patient" Role="Patient" Multiplicity="*" />
+        </Association>
+        <Association Name="ToothClinicalHistory">
+          <End Type="Model1.Tooth" Role="Tooth" Multiplicity="1" />
+          <End Type="Model1.ClinicalHistory" Role="ClinicalHistory" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="DiagpieceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Diagpiece)">
+        <MappingFragment StoreEntitySet="DiagpieceSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Definition" ColumnName="Definition" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Ubication" ColumnName="Ubication" />
+          <ScalarProperty Name="Extention" ColumnName="Extention" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiagUbicationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DiagUbication)">
+        <MappingFragment StoreEntitySet="DiagUbicationSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Bodypart" ColumnName="Bodypart" />
+          <ScalarProperty Name="Codification" ColumnName="Codification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtentionDentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ExtentionDent)">
+        <MappingFragment StoreEntitySet="ExtentionDentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiagTypeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.DiagType)">
+        <MappingFragment StoreEntitySet="DiagTypeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Characteristic" ColumnName="Characteristic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ToothSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Tooth)">
+        <MappingFragment StoreEntitySet="ToothSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="OC" ColumnName="OC" />
+          <ScalarProperty Name="VE" ColumnName="VE" />
+          <ScalarProperty Name="LI" ColumnName="LI" />
+          <ScalarProperty Name="ME" ColumnName="ME" />
+          <ScalarProperty Name="DI" ColumnName="DI" />
+          <ScalarProperty Name="CV" ColumnName="CV" />
+          <ScalarProperty Name="CL" ColumnName="CL" />
+          <ScalarProperty Name="ROOT" ColumnName="ROOT" />
+          <ScalarProperty Name="EXTRA" ColumnName="EXTRA" />
+          <ScalarProperty Name="ClinHist" ColumnName="ClinHist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Patient)">
+        <MappingFragment StoreEntitySet="PatientSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="FamName" ColumnName="FamName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClinicalHistorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ClinicalHistory)">
+        <MappingFragment StoreEntitySet="ClinicalHistorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PatId" ColumnName="PatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DiagTypeDiagpiece" TypeName="Model1.DiagTypeDiagpiece" StoreEntitySet="DiagpieceSet">
+      <EndProperty Name="DiagType">
+        <ScalarProperty Name="Id" ColumnName="DiagType_Id" />
+      </EndProperty>
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagUbicationDiagpiece" TypeName="Model1.DiagUbicationDiagpiece" StoreEntitySet="DiagpieceSet">
+      <EndProperty Name="DiagUbication">
+        <ScalarProperty Name="Id" ColumnName="DiagUbication_Id" />
+      </EndProperty>
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ExtentionDentDiagpiece" TypeName="Model1.ExtentionDentDiagpiece" StoreEntitySet="DiagpieceSet">
+      <EndProperty Name="ExtentionDent">
+        <ScalarProperty Name="Id" ColumnName="ExtentionDent_Id" />
+      </EndProperty>
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth" TypeName="Model1.DiagpieceTooth" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth1" TypeName="Model1.DiagpieceTooth1" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece1_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth2" TypeName="Model1.DiagpieceTooth2" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece2_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth3" TypeName="Model1.DiagpieceTooth3" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece3_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth4" TypeName="Model1.DiagpieceTooth4" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece4_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth5" TypeName="Model1.DiagpieceTooth5" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece5_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth6" TypeName="Model1.DiagpieceTooth6" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece6_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth7" TypeName="Model1.DiagpieceTooth7" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece7_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DiagpieceTooth8" TypeName="Model1.DiagpieceTooth8" StoreEntitySet="ToothSet">
+      <EndProperty Name="Diagpiece">
+        <ScalarProperty Name="Id" ColumnName="Diagpiece8_Id" />
+      </EndProperty>
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClinicalHistoryPatient" TypeName="Model1.ClinicalHistoryPatient" StoreEntitySet="PatientSet">
+      <EndProperty Name="ClinicalHistory">
+        <ScalarProperty Name="Id" ColumnName="ClinicalHistory_Id" />
+      </EndProperty>
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ToothClinicalHistory" TypeName="Model1.ToothClinicalHistory" StoreEntitySet="ClinicalHistorySet">
+      <EndProperty Name="Tooth">
+        <ScalarProperty Name="Id" ColumnName="Tooth_Id" />
+      </EndProperty>
+      <EndProperty Name="ClinicalHistory">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

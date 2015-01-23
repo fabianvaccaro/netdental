@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7861469e5e3a463194661c9e128f792a" Name="Diagram1" ZoomLevel="142" >
+        <EntityTypeShape EntityType="Model1.Diagpiece" Width="1.5" PointX="7.625" PointY="1.5" />
+        <EntityTypeShape EntityType="Model1.DiagUbication" Width="1.5" PointX="10.375" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.ExtentionDent" Width="1.5" PointX="10.375" PointY="4.875" />
+        <EntityTypeShape EntityType="Model1.DiagType" Width="1.5" PointX="10.25" PointY="1.125" />
+        <AssociationConnector Association="Model1.DiagTypeDiagpiece" />
+        <AssociationConnector Association="Model1.DiagUbicationDiagpiece" />
+        <AssociationConnector Association="Model1.ExtentionDentDiagpiece" />
+        <EntityTypeShape EntityType="Model1.Tooth" Width="1.5" PointX="5.125" PointY="1.75" />
+        <AssociationConnector Association="Model1.DiagpieceTooth" />
+        <AssociationConnector Association="Model1.DiagpieceTooth1" />
+        <AssociationConnector Association="Model1.DiagpieceTooth2" />
+        <AssociationConnector Association="Model1.DiagpieceTooth3" />
+        <AssociationConnector Association="Model1.DiagpieceTooth4" />
+        <AssociationConnector Association="Model1.DiagpieceTooth5" />
+        <AssociationConnector Association="Model1.DiagpieceTooth6" />
+        <AssociationConnector Association="Model1.DiagpieceTooth7" />
+        <AssociationConnector Association="Model1.DiagpieceTooth8" />
+        <EntityTypeShape EntityType="Model1.Patient" Width="1.5" PointX="1.25" PointY="2.25" />
+        <EntityTypeShape EntityType="Model1.ClinicalHistory" Width="1.5" PointX="3.125" PointY="5.5" />
+        <AssociationConnector Association="Model1.ClinicalHistoryPatient" />
+        <AssociationConnector Association="Model1.ToothClinicalHistory" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
